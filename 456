@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class DaysInFebruary {
+    public static void main(String[] args) {
+        // รับปีจากผู้ใช้
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("กรุณาใส่ปี (พศ): ");
+        int year = scanner.nextInt();
+        
+        // ตรวจสอบว่าเป็นปีกุมภาพันธ์หรือไม่
+        if (isLeapYear(year)) {
+            System.out.println("ปี " + year + " เป็นปีกุมภาพันธ์");
+            System.out.println("กุมภาพันธ์มี 29 วัน");
+        } else {
+            System.out.println("ปี " + year + " ไม่เป็นปีกุมภาพันธ์");
+            System.out.println("กุมภาพันธ์มี 28 วัน");
+        }
+        
+        // ปิด Scanner
+        scanner.close();
+    }
+
+    // เมธอดตรวจสอบว่าเป็นปีอธิกสุรทินหรือไม่
+    private static boolean isLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
