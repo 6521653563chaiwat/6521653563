@@ -1,0 +1,13 @@
+docker ps เรียกคอนเทนเนอ ที่ทำงานอยู่
+docker ps --all เรียกคอนเทนเนอที่ทำงานทั้งหมด
+Docker run hello-world
+Docker run busybox echo 'hello world in docker'
+Docker run busybox ls 
+Docker run busybox google.com
+docker stop ตามด้วย id
+docker pull busybox
+docker run nginx
+docker run -p 80:80 nginx
+docker run -p 9000:80 nginx
+system df
+docker image inspect nginx
